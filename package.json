@@ -1,0 +1,10 @@
+{
+  "name": "rory-hart-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "validate": "node scripts/validate.mjs"
+  }
+}
