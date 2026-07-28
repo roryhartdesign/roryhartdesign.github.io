@@ -8,9 +8,9 @@ export const site = {
 
 export const companies = {
   "Yahoo Finance": { label: "Yahoo Finance", mark: "yahoo-finance.svg" },
-  "Lark Health": { label: "Lark Health", mark: "lark-health.svg" },
+  "Lark Health": { label: "Lark Health", mark: "lark-health.png" },
   Hulu: { label: "Hulu", mark: "hulu.svg" },
-  Transamerica: { label: "Transamerica", mark: "transamerica.svg" },
+  Transamerica: { label: "Transamerica", mark: "transamerica.png" },
 };
 
 export const projects = [
