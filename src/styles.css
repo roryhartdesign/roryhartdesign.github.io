@@ -180,9 +180,7 @@ img {
 .story-card__media {
   position: relative;
   display: block;
-  overflow: hidden;
   aspect-ratio: 4 / 3;
-  padding: 5px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--paper);
@@ -193,8 +191,10 @@ img {
 .story-card__media img {
   width: 100%;
   height: 100%;
-  border-radius: 13px;
   object-fit: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
   transition: transform 700ms var(--ease);
 }
 
@@ -207,7 +207,7 @@ img {
 
 .story-card:hover .story-card__media img,
 .story-card:focus-within .story-card__media img {
-  transform: scale(1.018);
+  transform: translateZ(0) scale(1.018);
 }
 
 .story-card h2 {
@@ -243,9 +243,7 @@ img {
 .project-card__media {
   position: relative;
   display: block;
-  overflow: hidden;
   aspect-ratio: 1;
-  padding: 5px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--paper);
@@ -256,8 +254,10 @@ img {
 .project-card__media img {
   width: 100%;
   height: 100%;
-  border-radius: 13px;
   object-fit: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
   transition: transform 700ms var(--ease);
 }
 
@@ -270,7 +270,18 @@ img {
 
 .project-card:hover .project-card__media img,
 .project-card:focus-within .project-card__media img {
-  transform: scale(1.018);
+  transform: translateZ(0) scale(1.018);
+}
+
+.card-media__clip {
+  position: absolute;
+  inset: 5px;
+  display: block;
+  overflow: hidden;
+  border-radius: 13px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .project-card h2 {

@@ -102,7 +102,9 @@ const renderHome = () => {
       (project) => `
         <article class="project-card">
           <a class="project-card__media" href="/${project.slug}/" aria-label="${escapeHtml(project.title)}">
-            <img src="/assets/media/${project.cover}" alt="${escapeHtml(project.title)}" loading="lazy">
+            <span class="card-media__clip">
+              <img src="/assets/media/${project.cover}" alt="${escapeHtml(project.title)}" loading="lazy">
+            </span>
           </a>
           <h2><a href="/${project.slug}/">${escapeHtml(project.title)}</a></h2>
           ${companyChip(project.company)}
@@ -132,7 +134,9 @@ const renderStoriesIndex = () => {
       (story) => `
         <article class="story-card">
           <a class="story-card__media" href="/${story.slug}/" aria-label="${escapeHtml(story.title)}">
-            <img src="/assets/media/${story.cover}" alt="${escapeHtml(story.title)}" loading="lazy">
+            <span class="card-media__clip">
+              <img src="/assets/media/${story.cover}" alt="${escapeHtml(story.title)}" loading="lazy">
+            </span>
           </a>
           <h2><a href="/${story.slug}/">${escapeHtml(story.title)}</a></h2>
           <p>${escapeHtml(story.excerpt)}</p>
