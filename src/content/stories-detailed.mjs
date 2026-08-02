@@ -1,5 +1,170 @@
 export const detailedStories = [
   {
+    slug: "new-blog/stories/what-i-took-from-config",
+    title: "What I Took From Config",
+    excerpt: "How agentic tools reshape design ownership and trust",
+    cover: "config-2026-cover-v3.png",
+    date: "2026",
+    tags: ["Design leadership", "Agentic products", "Product strategy"],
+    sections: [
+      {
+        heading: "Designers Owning the Full Thing",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "The question underneath almost every conversation at Config this year was the same: is design willing to own what actually ships? Not just the file. The outcome. A few things from those discussions are still turning over in my mind."
+          },
+          {
+            type: "paragraph",
+            text: "The version of this I kept hearing: the gap between ‘design is done’ and ‘product is live’ is where intent gets diluted. For a long time that gap was mostly invisible to design because engineering owned it. That’s changing. The tools available now mean designers can stay present through delivery in ways that weren’t practical before, and the teams doing this are the ones shipping things that actually look like what was designed."
+          },
+          {
+            type: "pullquote",
+            text: "If we have the tools to close that gap and don’t use them, we’re choosing not to own the outcome."
+          }
+        ]
+      },
+      {
+        heading: "The Bottleneck Nobody’s Talking About Yet",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Something came up in a discussion about team velocity that I haven’t been able to drop. Engineering time has compressed dramatically through agentic tooling. Design exploration time hasn’t, not at the same rate. In squads where this tension hasn’t been addressed, design becomes the bottleneck, and it looks like a design problem when it’s actually a prioritization problem."
+          },
+          {
+            type: "pullquote",
+            text: "The squads handling this well aren’t exploring faster. They’re aligning earlier."
+          },
+          {
+            type: "paragraph",
+            text: "Outcomes and scope are agreed with PM and engineering before exploration starts. Done is defined before the work begins. When exploration has that frame, it doesn’t sprawl. When it doesn’t, engineering laps you and you’re retrofitting intent rather than shaping it."
+          },
+          {
+            type: "paragraph",
+            text: "What faster engineering timelines actually demand isn’t less exploration. It’s better upfront discipline. AI accelerates how fast you generate concepts, but it doesn’t tell you when you’ve explored enough. That judgment still requires a clear frame going in, and the teams getting this right are setting that frame with their squads before the work starts, not mid-sprint."
+          }
+        ]
+      },
+      {
+        heading: "How Design Management Is Changing",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "A conversation at Config specifically about design leadership surfaced something that doesn’t get discussed enough. The 10x productivity narrative maps cleanly to engineering. It maps less cleanly to the judgment-heavy parts of running a design org: hiring, coaching, setting direction and deciding what not to build. Those things haven’t been meaningfully compressed by AI tools. A design manager who’s honest will tell you they’re not feeling dramatically more productive. They’re dealing with more change at a faster rate."
+          },
+          {
+            type: "paragraph",
+            text: "What is shifting is the player-coach question. The consensus was clear: pure people managers are harder to justify. With tools that let everyone build and prototype faster, managers who can also do the work carry more weight. Not because management matters less, but because the ability to model what good looks like, get into the details when needed, and earn trust through craft rather than just authority matters more when the work itself is changing this fast."
+          },
+          {
+            type: "paragraph",
+            text: "On org structure, the flattening conversation came up and the answer was direct. Radical flattening sounds efficient until someone needs to know who’s responsible for a surface going well and nobody has a clear answer. Someone needs to own an area. That accountability doesn’t dissolve as teams scale with AI tools. If anything it matters more, because decisions are being made faster and unclear ownership creates expensive mistakes quickly."
+          },
+          {
+            type: "pullquote",
+            text: "Creating space is a deliberate leadership act."
+          },
+          {
+            type: "paragraph",
+            text: "When everyone can build and ship faster, the instinct is to accelerate everything. But the judgment calls that produce good work can’t be rushed indefinitely. A manager who creates room to evaluate, to question whether something should ship, and to slow down at the right moment is protecting quality."
+          }
+        ]
+      },
+      {
+        heading: "Research Is Connective Tissue",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "There’s pressure across the industry to ship AI features quickly. But speed to market and usage aren’t the same thing. A product can ship fast and barely get used. Whether people actually find value in what’s been built is a product, design and research problem. The teams under the most pressure to move quickly are often the ones least likely to make time to understand whether fast is producing anything worth having."
+          },
+          {
+            type: "pullquote",
+            text: "The cost of slow research isn’t measured in time. It’s measured in eroded trust."
+          },
+          {
+            type: "paragraph",
+            text: "When design and research can’t give PMs confidence quickly enough, decisions get made without them. Once a decision has been made and built around, you’re no longer shaping direction. You’re reacting to it."
+          },
+          {
+            type: "paragraph",
+            text: "The teams getting this right aren’t doing faster research. They’re doing proactive research: moving insights through the squad before anyone asks, surfacing user context before engineering needs it, and being in the agentic conversation before the architecture is set. I heard one version of this that stuck with me: a product area where engineers had been building an agentic system for months before realising they needed personas, top tasks and use cases for the thing they’d already built. By that point they were retrofitting empathy into something architectured without it."
+          },
+          {
+            type: "paragraph",
+            text: "The answer isn’t to do more research later. It’s to be present earlier: in discovery, in the architecture conversation, and before the frame has been set. That’s a different relationship with the squad than showing up when someone has a question. It’s the difference between shaping a system and auditing one."
+          }
+        ]
+      },
+      {
+        heading: "Designing for People, With Agents",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "‘Designing for agents’ came up constantly at Config. It’s a phrase worth questioning. Designing for agents drifts quickly into optimising for what the agent can do: what it produces, when it triggers and how it performs. The person using the product becomes secondary, and the design challenge gets framed around the capability rather than the person it’s supposed to serve."
+          },
+          {
+            type: "pullquote",
+            text: "The agent is the mechanism. The person is still the beneficiary."
+          },
+          {
+            type: "paragraph",
+            text: "Every decision about when the agent acts, how it communicates what it did, and how much autonomy it gets should be evaluated against what the person needs to feel informed, in control and well served. It should not be evaluated against what the agent is capable of. ‘What can this agent do?’ is a very different starting point from ‘what does this person need to trust what the agent did?’"
+          },
+          {
+            type: "paragraph",
+            text: "There’s also the delight argument. As agents do more of the functional heavy lifting, the micro-interactions and craft moments that make a product feel considered rather than assembled become more differentiating. The more autonomous a product becomes, the more human it needs to feel. Taste and craft still matter. As the functional layer gets increasingly automated, they’re what separates a product worth using from one that merely works."
+          }
+        ]
+      },
+      {
+        heading: "Transparency Is the UX Problem",
+        blocks: [
+          {
+            type: "pullquote",
+            text: "Trust doesn’t come from the technology being impressive. It comes from users being able to see what changed, understand why, and reverse it if needed."
+          },
+          {
+            type: "paragraph",
+            text: "Attribution and legibility are the design challenges. When did the agent act? What did it do? How do I take back control? For consumer products this bar is higher than in internal tooling or products people use occasionally. Something used every day needs to feel reviewable and reversible at every step. The design of that transparency is exactly the kind of work that lives between product and engineering and gets missed when design isn’t in the room early."
+          },
+          {
+            type: "paragraph",
+            text: "One thread from those discussions that nobody fully resolved: how do you design the trust curve deliberately? The framing that made most sense was thinking about it like a new working relationship. More control and tighter checkpoints early, with human approval before anything consequential goes out. Over time, as the system earns trust through consistent and legible behaviour, you extend more autonomy. But who decides when enough trust has been established, and how does that get communicated to users? That question is still very much open."
+          }
+        ]
+      },
+      {
+        heading: "Owning the Outcome",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Design has always been good at having opinions about outcomes. What’s changing is our ability to own them."
+          },
+          {
+            type: "paragraph",
+            text: "The handoff used to be the natural boundary of design’s responsibility. You handed over the file, engineering built it, something got lost, and everyone accepted that as the cost of the process. Those dynamics are shifting. Designers can stay present through delivery. They can be in the architecture conversation before the frame is set. They can define how trust gets designed into agentic systems rather than waiting to see what engineering ships."
+          },
+          {
+            type: "paragraph",
+            text: "The shift is bigger than workflow. The same tools that give design more reach require design to take more responsibility for what that reach produces. More influence over what ships means more ownership of whether it works for the people using it."
+          },
+          {
+            type: "paragraph",
+            text: "Design is best equipped to answer questions about how people build trust with systems they didn’t build, what makes an experience feel legible rather than opaque, and when speed is actually serving the user instead of the roadmap. These are exactly the questions that matter most as products become more agentic. Answering them is design work. The more autonomous products become, the more obviously true that is."
+          },
+          {
+            type: "pullquote",
+            text: "The only version of this that doesn’t go well is the one where design keeps behaving like a service function."
+          },
+          {
+            type: "paragraph",
+            text: "Waiting to be briefed. Optimising the file. Handing it over. That model was always a compromise. Now it’s just clearly the wrong one."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "new-blog/collaborativeobservationtechniques-t5mjc",
     "title": "Collaborative Observation",
     "excerpt": "Turning shared observations into faster product decisions",

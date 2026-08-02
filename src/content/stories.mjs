@@ -1,5 +1,13 @@
 export const stories = [
   {
+    slug: "new-blog/stories/what-i-took-from-config",
+    title: "What I Took From Config",
+    excerpt: "How agentic tools reshape design ownership and trust",
+    cover: "config-2026-cover-v3.png",
+    coverClass: "story-card__media--config",
+    isNew: true,
+  },
+  {
     slug: "new-blog/collaborativeobservationtechniques-t5mjc",
     title: "Shared Observation",
     excerpt: "Turning shared observations into faster product decisions",

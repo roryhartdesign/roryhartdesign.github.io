@@ -40,6 +40,22 @@ const ensurePage = async (route, html) => {
 const lineLink = (href, label, current = false) =>
   `<a class="line-link" href="${href}"${current ? ' aria-current="page"' : ""}>${escapeHtml(label)}</a>`;
 
+const navRocket = () => `
+  <span class="nav-rocket" data-nav-rocket aria-hidden="true">
+    <svg viewBox="0 0 32 46">
+      <g class="nav-rocket__flame">
+        <path class="nav-rocket__flame-outer" d="M10.5 29.5 16 44l5.5-14.5Z"/>
+        <path class="nav-rocket__flame-inner" d="M13.5 29.5 16 39l2.5-9.5Z"/>
+      </g>
+      <g class="nav-rocket__vehicle">
+        <path d="m16 2.5-8 11V30h16V13.5Z" fill="currentColor"/>
+        <path d="m8 21.5-5 9.3 5-.9Zm16 0 5 9.3-5-.9Z" fill="currentColor"/>
+        <rect x="12.5" y="14" width="7" height="7" fill="#f5f6f7"/>
+        <path d="M11.5 27.5h9" fill="none" stroke="#f5f6f7" stroke-width="1.2"/>
+      </g>
+    </svg>
+  </span>`;
+
 const header = (current = "") => `
   <header class="site-header site-shell">
     <a class="brand" href="/">Rory's Portfolio</a>
@@ -48,7 +64,7 @@ const header = (current = "") => `
       <span></span>
     </button>
     <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
-      ${lineLink("/", "Shipped Products", current === "projects")}
+      <span class="nav-primary">${navRocket()}${lineLink("/", "Shipped Products", current === "projects")}</span>
       ${lineLink("/new-blog/", "Stories", current === "stories")}
       ${lineLink("/about-me/", "About", current === "about")}
     </nav>
@@ -134,10 +150,11 @@ const renderStoriesIndex = () => {
     .map(
       (story) => `
         <article class="story-card">
-          <a class="story-card__media" href="/${story.slug}/" aria-label="${escapeHtml(story.title)}">
+          <a class="story-card__media${story.coverClass ? ` ${escapeHtml(story.coverClass)}` : ""}" href="/${story.slug}/" aria-label="${escapeHtml(story.title)}">
             <span class="card-media__clip">
               <img src="/assets/media/${story.cover}" alt="${escapeHtml(story.title)}" loading="lazy">
             </span>
+            ${story.isNew ? '<span class="story-card__new">New</span>' : ""}
           </a>
           <h2><a href="/${story.slug}/">${escapeHtml(story.title)}</a></h2>
           <p>${escapeHtml(story.excerpt)}</p>
@@ -178,7 +195,7 @@ const renderAbout = () =>
           <section class="about-card">
             <h2>Professional</h2>
             <p>I am an enthusiastic, highly driven and experienced UX and Product Design leader with a passion for building products. I turn strategy into engaging, meaningful and valuable user experiences, and help multi-disciplinary teams push the boundaries of web, mobile and living room design.</p>
-            <a class="resume-link" href="/downloads/Rory-Hart-Resume.pdf" download>Download Resume <span aria-hidden="true">↓</span></a>
+            <a class="resume-link" href="/downloads/Rory-Hart-Resume.pdf" download>Download Resume <span class="resume-link__icon" aria-hidden="true"></span></a>
           </section>
           <section class="about-card">
             <h2>Personal</h2>
@@ -282,6 +299,14 @@ const renderDetailedBlock = (block, sectionHeading) => {
   if (block.type === "paragraph") {
     return `<p>${escapeHtml(block.text)}</p>`;
   }
+  if (block.type === "pullquote") {
+    return `<blockquote class="article-pullquote">
+      <span class="article-pullquote__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M3 20c3.25-.9 5-3.1 5-6H5.5A2.5 2.5 0 0 1 3 11.5v-4A2.5 2.5 0 0 1 5.5 5h3A2.5 2.5 0 0 1 11 7.5V13c0 4.6-2.65 7.45-8 8v-1ZM14 20c3.25-.9 5-3.1 5-6h-2.5a2.5 2.5 0 0 1-2.5-2.5v-4A2.5 2.5 0 0 1 16.5 5h3A2.5 2.5 0 0 1 22 7.5V13c0 4.6-2.65 7.45-8 8v-1Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <p>${escapeHtml(block.text)}</p>
+    </blockquote>`;
+  }
   if (block.type === "gallery") {
     return renderCarousel(block.images, sectionHeading);
   }
@@ -359,7 +384,10 @@ const renderStoryPage = (story) => {
     body: `
       <main class="project-main site-shell">
         <header class="project-hero">
-          ${story.date ? `<div class="project-meta"><span class="meta-chip">${escapeHtml(story.date)}</span></div>` : ""}
+          ${story.date || story.tags?.length ? `<div class="project-meta">
+            ${story.date ? `<span class="meta-chip">${escapeHtml(story.date)}</span>` : ""}
+            ${(story.tags || []).map((tag) => `<span class="meta-chip">${escapeHtml(tag)}</span>`).join("")}
+          </div>` : ""}
           <h1 class="project-title">${escapeHtml(story.title)}</h1>
           <div class="summary-card">
             <p>${escapeHtml(story.excerpt)}</p>

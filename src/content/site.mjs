@@ -3,7 +3,7 @@ export const site = {
   role: "Head of Design",
   employer: "Yahoo Finance",
   linkedin: "https://www.linkedin.com/in/rory-hart-design/",
-  quote: "Designed and built with agents.",
+  quote: "This site was designed and built with agents.",
 };
 
 export const companies = {
