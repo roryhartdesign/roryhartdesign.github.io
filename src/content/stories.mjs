@@ -1,7 +1,7 @@
 export const stories = [
   {
     slug: "new-blog/collaborativeobservationtechniques-t5mjc",
-    title: "Collaborative Observation",
+    title: "Shared Observation",
     excerpt: "Turning shared observations into faster product decisions",
     cover: "6f092b65384ad1524c91.webp",
   },

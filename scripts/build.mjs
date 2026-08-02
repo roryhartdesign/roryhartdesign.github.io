@@ -78,6 +78,7 @@ const document = ({ title, description = "", current = "", body }) => `<!doctype
     <meta name="description" content="${escapeHtml(description)}">
     <meta name="theme-color" content="#ffffff">
     <title>${escapeHtml(title)}</title>
+    <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/assets/styles.css">
   </head>
   <body>
